@@ -1,8 +1,6 @@
 package com.example.webviewdemo
 
-import android.R
 import android.os.Bundle
-import android.view.View
 import android.webkit.WebView
 import android.webkit.WebViewClient
 import androidx.activity.ComponentActivity
@@ -15,13 +13,13 @@ class MainActivity : ComponentActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        mainActivityBinding=MainActivityBinding.inflate(layoutInflater)
+        mainActivityBinding = MainActivityBinding.inflate(layoutInflater)
         setContentView(mainActivityBinding.root)
 
         setWebViewData()
     }
 
-    private fun setWebViewData(){
+    private fun setWebViewData() {
         mainActivityBinding.apply {
             webView.webViewClient = object : WebViewClient() {
                 @Deprecated("Deprecated in Java")
@@ -31,7 +29,7 @@ class MainActivity : ComponentActivity() {
                 }
             }
             webView.settings.javaScriptEnabled = true
-            webView.loadUrl("https://www.google.com/")
+            webView.loadUrl("http://www.google.com/")
         }
     }
 }

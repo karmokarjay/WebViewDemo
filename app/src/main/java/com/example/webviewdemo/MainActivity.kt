@@ -6,7 +6,6 @@ import android.webkit.WebViewClient
 import androidx.activity.ComponentActivity
 import com.example.webviewdemo.databinding.MainActivityBinding
 
-
 class MainActivity : ComponentActivity() {
 
     lateinit var mainActivityBinding: MainActivityBinding
@@ -29,7 +28,7 @@ class MainActivity : ComponentActivity() {
                 }
             }
             webView.settings.javaScriptEnabled = true
-            webView.loadUrl("http://www.google.com/")
+            webView.loadUrl("192.168.1.128")
         }
     }
 }
